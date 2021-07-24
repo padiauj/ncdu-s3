@@ -8,9 +8,9 @@ This tool generates [ncdu](http://dev.yorhel.nl/ncdu) formatted JSON data file f
 
 # Usage
 ```bash
-$ sudo pip3 install git+git://github.com/padiauj/ncdu-s3.git
-$ ncdu-s3 s3://my-bucket my-bucket.json
-$ ncdu -f my-bucket.json
+sudo pip3 install git+git://github.com/padiauj/ncdu-s3.git
+ncdu-s3 s3://my-bucket my-bucket.json
+ncdu -f my-bucket.json
 ```
 
 Please note you need boto configured for your user before using this tool.  
