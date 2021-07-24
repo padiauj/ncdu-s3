@@ -23,7 +23,12 @@ class NcduDataWriter(object):
         self.depth = 0
 
         self.output.write('[1,0,')
-        json.dump({'progname': 'ncdu-s3', 'progver': '0.1', 'timestamp': int(time.time())}, self.output)
+        json.dump(
+            {
+                'progname': 'ncdu-s3',
+                'progver': '0.1',
+                'timestamp': int(time.time())
+            }, self.output)
 
         # ncdu data format must begin with a directory
         self.dir_enter(root)
@@ -62,7 +67,7 @@ class NcduDataWriter(object):
         json.dump({'name': name, 'dsize': size}, self.output)
 
     def close(self):
-        for i in xrange(self.depth):
+        for i in range(self.depth):
             self.dir_leave()
 
         # close the format JSON document we opened in our constructor

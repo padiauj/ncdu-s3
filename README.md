@@ -1,11 +1,12 @@
 # ncdu-s3
-This tool generates [ncdu](http://dev.yorhel.nl/ncdu) formatted JSON data file for S3 buckets
+## Python 3 compatible
+This tool generates [ncdu](http://dev.yorhel.nl/ncdu) formatted JSON data file for S3 buckets. 
 
 ![Screenshot](screenshots.gif)
 
 # Usage
 ```bash
-$ sudo pip install ncdu-s3
+$ sudo pip3 install git+git://github.com/padiauj/ncdu-s3.git
 $ ncdu-s3 s3://my-bucket my-bucket.json
 $ ncdu -f my-bucket.json
 ```
